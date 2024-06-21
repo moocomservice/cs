@@ -43,7 +43,7 @@ Route::get('/search', function () {
     return view('search');
 })->name('search');
 
-Route::get('/profile', [ProfileController::class, 'index'])->middleware('auth');
+Route::post('/profile', [ProfileController::class, 'index'])->middleware('auth');
 
 Route::post('/register', [AuthController::class, 'register'])->name('register');
 
