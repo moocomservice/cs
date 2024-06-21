@@ -38,7 +38,7 @@
     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 </div>
 <div class="modal-body">
-    <form action="/profile" method="POST">
+    <form action="{{ route('profile') }}" method="POST">
         @csrf
         <div class="mb-3">
             <label for="username" class="form-label">ชื่อผู้ใช้</label>
@@ -48,7 +48,6 @@
             <label for="password" class="form-label">รหัสผ่าน</label>
             <input type="password" class="form-control" id="password" name="password" required>
         </div>
-        <input type="hidden" name="_token" value="{{ csrf_token() }}" />
         <button type="submit" class="btn btn-primary">เข้าสู่ระบบ</button>
     </form>
 </div>
